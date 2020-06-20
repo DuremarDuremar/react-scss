@@ -5,10 +5,7 @@ import Header from "./components/header/header";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h4>Новый проект!</h4>
-        <Header />
-      </header>
+      <Header />
     </div>
   );
 }
