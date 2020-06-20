@@ -8,7 +8,7 @@ class Header extends React.Component {
           <div className="header-reg">1</div>
           <div className="header-form">2</div>
           <div className="header-nav">3</div>
-          <div className="header-afisha">4</div>
+          <div className="header-afisha">40</div>
         </div>
       </header>
     );
