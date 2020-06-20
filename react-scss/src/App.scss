@@ -1,8 +1,44 @@
-// .App {
-//   text-align: center;
-// }
+.App {
+  margin: 0px auto;
+  max-width: 1280px;
+  //   height: 1842px;
+  display: grid;
+  //   grid-template-rows: 112px 200px 1156px 513px;
+  grid-template-rows: 2fr 2fr 7fr 3fr;
+  grid-template-columns: 3fr 9fr;
+  grid-template-areas:
+    "h h"
+    "a a"
+    "s c"
+    "f f";
+}
 
-// .App-header {
-//   min-height: 100vh;
-//   font-size: calc(10px + 2vmin);
-// }
+.container {
+  max-width: 990px;
+  margin: 0px auto;
+}
+
+.header {
+  grid-area: h;
+  background-color: rosybrown;
+}
+
+.afisha {
+  background-color: blueviolet;
+  grid-area: a;
+}
+
+.saidbar {
+  background-color: chartreuse;
+  grid-area: s;
+}
+
+.content {
+  background-color: cyan;
+  grid-area: c;
+}
+
+.footer {
+  background-color: darkred;
+  grid-area: f;
+}
