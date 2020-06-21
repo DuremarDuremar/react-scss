@@ -4,9 +4,10 @@
   //   height: 1842px;
   display: grid;
   //   grid-template-rows: 112px 200px 1156px 513px;
-  grid-template-rows: 2fr 2fr 7fr 3fr;
+  grid-template-rows: 28px 2fr 2fr 6fr 3fr;
   grid-template-columns: 3fr 9fr;
   grid-template-areas:
+    "hr hr"
     "h h"
     "a a"
     "s c"

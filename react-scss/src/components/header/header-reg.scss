@@ -1,2 +1,19 @@
-.header-reg-wrapp {
+.header-reg {
+  grid-area: hr;
+  background-color: #424242;
+
+  ul {
+    float: right;
+    color: white;
+    display: flex;
+    li {
+      font-size: 16px;
+      padding: 8px 0 4px 0;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        padding-right: 24px;
+      }
+    }
+  }
 }
