@@ -1,0 +1,137 @@
+.header-front {
+  grid-area: hf;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  font-family: "Segoe WP";
+  padding: 10px 0 15px 0;
+}
+
+.header-front-wrapp {
+  display: grid;
+  grid-template-columns: 1.5fr 7fr 3fr 1.5fr;
+}
+.header-front-logo {
+  display: flex;
+
+  div {
+    position: relative;
+    padding-top: 5px;
+    padding-right: 10px;
+    &:after {
+      display: block;
+      content: "cinema";
+      text-transform: uppercase;
+      font-family: "Simplo Caps DEMO";
+      font-size: 20px;
+      line-height: 26px;
+      color: #fff;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+    }
+  }
+
+  p {
+    color: #79b260;
+    font-family: "Simplo Caps DEMO";
+    text-transform: uppercase;
+    font-size: 21px;
+    line-height: 21px;
+    transform: rotate(-90deg);
+  }
+}
+.header-front-input {
+  display: flex;
+  align-items: center;
+  form {
+    display: flex;
+    input {
+      border: 5px solid #79b260;
+      width: 328px;
+      font-size: 20px;
+    }
+
+    button {
+      display: flex;
+      background-color: #79b260;
+      align-items: center;
+      padding: 10px;
+      img {
+        padding-right: 3px;
+      }
+
+      p {
+        font-size: 23px;
+
+        color: #fff;
+      }
+    }
+  }
+}
+.header-front-cart {
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    padding: 10px;
+  }
+  .cart {
+    align-self: center;
+    color: #6d6d6d;
+    font-size: 23px;
+    line-height: 26px;
+    span {
+      font-size: 13px;
+    }
+  }
+  .bay {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 15px 0 10px;
+    p {
+      color: #6d6d6d;
+      font-size: 25px;
+      line-height: 25px;
+      font-weight: 700;
+    }
+  }
+  button {
+    color: #fff;
+    font-size: 15px;
+    line-height: 26px;
+    padding: 6px 11px 7px 7px;
+
+    background-image: linear-gradient(to top, #242424 0%, #424242 100%);
+    border: 1px solid #232323;
+    box-shadow: inset 1px 1px 0 rgba(118, 118, 118, 0.75);
+  }
+}
+.header-front-list {
+  img {
+    display: block;
+    margin: 0px auto;
+    position: relative;
+    top: 30%;
+  }
+
+  div {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 21px;
+    color: #6d6d6d;
+
+    &::before {
+      content: "20";
+      display: block;
+      margin-left: auto;
+      width: 28px;
+      margin-right: 0;
+      background-color: #79b260;
+      border-radius: 40%;
+      padding: 3px;
+      color: #fff;
+    }
+  }
+}

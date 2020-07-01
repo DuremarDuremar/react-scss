@@ -1,0 +1,22 @@
+.header-top {
+  background-color: #424242;
+  grid-area: ht;
+
+  ul {
+    float: right;
+    display: inline-flex;
+
+    li {
+      color: #fff;
+      padding: 8px 0 4px 0;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 23px;
+      }
+      &:hover {
+        font-weight: bold;
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+}

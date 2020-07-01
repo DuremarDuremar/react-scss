@@ -1,45 +1,29 @@
 .App {
-  margin: 0px auto;
+  font-family: "Roboto", sans-serif;
   max-width: 1280px;
-  //   height: 1842px;
+  margin: 0px auto;
   display: grid;
-  //   grid-template-rows: 112px 200px 1156px 513px;
-  grid-template-rows: 28px 2fr 2fr 6fr 3fr;
-  grid-template-columns: 3fr 9fr;
+  grid-template-rows: 0.2fr 0.8fr 0.6fr 8.4fr 2fr;
+  grid-template-columns: 2fr 10fr;
   grid-template-areas:
-    "hr hr"
-    "h h"
-    "a a"
-    "s c"
+    "ht ht"
+    "hf hf"
+    "n n"
+    "c c"
     "f f";
 }
 
 .container {
-  max-width: 990px;
+  max-width: 1000px;
   margin: 0px auto;
 }
 
-.header {
-  grid-area: h;
-  background-color: rosybrown;
-}
-
-.afisha {
-  background-color: blueviolet;
-  grid-area: a;
-}
-
-.saidbar {
-  background-color: chartreuse;
-  grid-area: s;
-}
-
-.content {
-  background-color: cyan;
+.center {
   grid-area: c;
 }
 
-.footer {
-  background-color: darkred;
-  grid-area: f;
+.center-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-template-areas: "sb m";
 }

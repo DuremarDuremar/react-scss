@@ -1,0 +1,48 @@
+.main {
+  grid-area: m;
+}
+
+.main-title {
+  display: inline-block;
+  font-family: "Segoe WP";
+  color: #fff;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 18px 3px;
+  margin: 5px 0;
+  background-color: #92d774;
+  border-radius: 60%;
+  border: 2px solid #5b5b5b;
+}
+
+.main-wrapper {
+  display: grid;
+  grid: repeat(4, 1fr) / repeat(4, 1fr);
+  grid-gap: 10px 10px;
+  padding: 3px;
+
+  div {
+    background-color: coral;
+    img {
+      width: 180px;
+      height: 250px;
+      padding-bottom: 40px;
+      border: 2px solid #646464;
+    }
+  }
+}
+
+.main-pag {
+  margin: 10px 0;
+  float: right;
+
+  a {
+    color: #646464;
+    &:active {
+      border-bottom: 5px solid #92d774;
+    }
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+}
