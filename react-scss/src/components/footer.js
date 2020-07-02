@@ -1,10 +1,7 @@
 import React from "react";
-import FooterFooter from "./footer-footer";
+import Post from "./footer-footer";
 import "./footer.scss";
-
-const withoutIndex = (array, index) => {
-  array.slice(0, index).concat(array.slice(index + 1));
-};
+import { indexDelete } from "../components/func/indexDelete";
 
 class Footer extends React.Component {
   constructor(props) {
@@ -18,17 +15,40 @@ class Footer extends React.Component {
   OneNoteDelete = (indexToRemove) => {
     this.setState((oldState) => {
       return {
-        notes: withoutIndex(oldState.notes, indexToRemove),
+        notes: indexDelete(oldState.notes, indexToRemove),
       };
     });
   };
 
+  // render() {
+  //   return (
+  //     <footer>
+  //       <p>11</p>
+  //       <FooterFooter
+  //         notesToRender={this.state.notes}
+  //         onDelete={this.OneNoteDelete}
+  //       />
+  //       <div className="left">
+
+  //       </div>
+  //     </footer>
+  //   );
+  // }
+
   render() {
     return (
-      <footer>
-        <p>11</p>
-        <FooterFooter notes={this.state.notes} onDelete={this.OneNoteDelete} />
-      </footer>
+      <div className="container-footer feed">
+        <div className="left">
+          <Post
+            src="https://cdn21.img.ria.ru/images/155959/50/1559595090_0:0:3160:2048_600x600_80_0_1_be476b2955b5e027bdbb47b9ff1945f2.jpg"
+            alt="berlin"
+          />
+          <Post
+            src="https://horosho-tam.ru/thumb/1024/pics/28/26/5a7b2941d8dca154c3dd2628/.jpg"
+            alt="munich"
+          />
+        </div>
+      </div>
     );
   }
 }
