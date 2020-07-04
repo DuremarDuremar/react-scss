@@ -1,7 +1,36 @@
 import React from "react";
 import Post from "./Post";
+import InstaService from "../../services/instaService";
 
 class Posts extends React.Component {
+  instaService = new InstaService();
+
+  state = {
+    posts: [],
+    error: false,
+  };
+
+  componentDidMount() {
+    this.updatePosts();
+  }
+
+  updatePosts() {
+    this.instaService.getAllPost().then(this.onPostLoaded).catch(this.onError);
+  }
+
+  onPostLoaded = (posts) => {
+    this.setState({
+      posts: posts,
+      error: false,
+    });
+  };
+
+  onError = (err) => {
+    this.setState({
+      error: true,
+    });
+  };
+
   render() {
     return (
       <div className="left">
