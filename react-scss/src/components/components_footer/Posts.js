@@ -23,12 +23,16 @@ class Posts extends React.Component {
       posts: posts,
       error: false,
     });
+
+    console.log(this.state.posts);
   };
 
   onError = (err) => {
     this.setState({
       error: true,
     });
+
+    console.log("error");
   };
 
   render() {
