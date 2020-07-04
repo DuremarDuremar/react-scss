@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "./Post";
+import User from "./User";
 import InstaService from "../../services/instaService";
 
 class Posts extends React.Component {
@@ -35,7 +36,23 @@ class Posts extends React.Component {
     console.log("error");
   };
 
+  renderItems(arr) {
+    return arr.map((item) => {
+      const { name, altname, src, alt, photo, descr, id } = item;
+      return (
+        <div key={id} className="post">
+          <User src={photo} alt={altname} name={name} min />
+          <img src={src} alt={alt}></img>
+          <div className="post_name">{name}</div>
+          <div className="post_descr">{descr}</div>
+        </div>
+      );
+    });
+  }
+
   render() {
+    const { error, posts } = this.state;
+    const items = this.renderItems(posts);
     return (
       <div className="left">
         <Post
@@ -46,6 +63,7 @@ class Posts extends React.Component {
           src="https://horosho-tam.ru/thumb/1024/pics/28/26/5a7b2941d8dca154c3dd2628/.jpg"
           alt="munich"
         />
+        {items}
       </div>
     );
   }
