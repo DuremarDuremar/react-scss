@@ -12,8 +12,8 @@ export default class Post extends React.Component {
           min
         />
         <img src={this.props.src} alt={this.props.alt}></img>
-        <div className="post_name">some account</div>
-        <div className="post_descr">
+        <div className="post__name">{this.props.name}</div>
+        <div className="post__descr">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
