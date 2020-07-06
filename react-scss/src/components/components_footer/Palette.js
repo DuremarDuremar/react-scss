@@ -32,9 +32,21 @@ export default class Palette extends React.Component {
     });
   };
 
-  // render(){
-  //     return(
+  renderItems(arr) {
+    return arr.map((item) => {
+      return <img src={item.src} alt={item.alt}></img>;
+    });
+  }
 
-  //     )
-  // }
+  render() {
+    const { error, photos } = this.state;
+
+    if (error) {
+      return <ErrorMessage />;
+    }
+
+    const items = this.renderItems(photos);
+
+    return <div className="palette">{items}</div>;
+  }
 }

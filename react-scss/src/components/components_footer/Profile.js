@@ -10,7 +10,7 @@ const Profile = () => {
         alt="actor"
         name="Duglas"
       />
-      {/* <Palette /> */}
+      <Palette />
     </div>
   );
 };
