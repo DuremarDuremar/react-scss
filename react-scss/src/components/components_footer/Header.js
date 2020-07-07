@@ -1,25 +1,26 @@
 import React from "react";
 import logoFooter from "../../img/footer/logo-footer.svg";
+import { link, Link } from "react-router-dom";
 
 export default class Header extends React.Component {
   render() {
     return (
       <div className="header-footer">
         <div className="h-flex container-footer">
-          <a href="#" className="logo">
+          <Link to="/" className="logo">
             <img src={logoFooter} ali="logofooter"></img>
-          </a>
+          </Link>
           <nav className="links">
             <ul>
               <li>
-                <a href="#" className="menu_links">
+                <Link to="/" className="menu_links">
                   Лента
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="menu_links">
+                <Link to="/profile" className="menu_links">
                   Профиль
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
