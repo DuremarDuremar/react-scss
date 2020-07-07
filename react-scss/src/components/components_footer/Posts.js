@@ -42,7 +42,7 @@ class Posts extends React.Component {
       const { name, altname, src, alt, photo, descr, id } = item;
       return (
         <div key={id} className="post">
-          <User src={photo} alt={altname} name={name} min />
+          <User photo={photo} alt={altname} name={name} min />
           <img src={src} alt={alt}></img>
           <div className="post__name">{name}</div>
           <div className="post__descr">{descr}</div>

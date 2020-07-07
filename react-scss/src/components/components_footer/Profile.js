@@ -6,7 +6,7 @@ const Profile = () => {
   return (
     <div className="container profile">
       <User
-        src="https://www.kino-teatr.ru/acter/foto/hollywood/49001.jpg"
+        photo="https://www.kino-teatr.ru/acter/foto/hollywood/49001.jpg"
         alt="actor"
         name="Duglas"
       />
